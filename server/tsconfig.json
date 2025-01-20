@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowArbitraryExtensions": false, // 타입스크립트가 아닌 파일 컴파일하지 않음
     "target": "ES2018",
     "module": "CommonJS",
     "esModuleInterop": true,

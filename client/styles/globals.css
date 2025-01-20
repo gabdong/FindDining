@@ -1,42 +1,150 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: blue;
+  
+  --header-height: 80px;
 }
-
-@media (prefers-color-scheme: dark) {
+/* Tablet */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  }
+  body {
+      font-size: 14px;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  :root {
+    --header-height: 40px;
+  }
+  body {
+      font-size: 12px;
+  }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  background: var(--dark-m);
+  color: var(--gray-l);
+  font-size: 16px;
+}
+html, body, #__next {
+  width: 100%;
+  height: 100%;
+}
+body {
+  line-height: 1;
+}
+body.modalAcitve {
+  overflow-y: hidden;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
 a {
-  color: inherit;
-  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+}
+input {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--gray-l);
+  font-family: inherit;
+}
+input::placeholder {
+  font-size: 12px;
+  color: var(--gray-l);
+}
+h1, h2, h3, h4, h5, h6, p, span, button, input, select, a {
+  line-height: 1.2;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pointer {
+  cursor: pointer;
+}
+.headline {
+  font-family: 'SUIT-Medium';
+  font-size: 34px;
+  letter-spacing: 0.25px;
+}
+.subTitle {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
+.smallTitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+.normalText {
+  font-family: 'SUIT-Regular';
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.caption {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray-l-2);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/** mobile, pc only **/
+.mobileOnly {
+  display: none;
+}
+.pcOnly {
+  display: block;
+}
+@media all and (max-width: 767px) {
+  .mobileOnly {
+      display: block;
+  }
+  .pcOnly {
+      display: none;
   }
 }
